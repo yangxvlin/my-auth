@@ -4,6 +4,10 @@ This is the authentication server which use keycloak as the server implementatio
 ## How to run
 https://www.keycloak.org/getting-started/getting-started-docker
 
-## How to setup the keycloak server
+`docker run -p 8080:8080 -e KEYCLOAK_ADMIN=admin -e KEYCLOAK_ADMIN_PASSWORD=admin quay.io/keycloak/keycloak:17.0.1 start-dev`
 
-client secret: gZZ2i9HU6K5Spqs8djNfU7zfGJvY3R1c
+## How to setup the keycloak server
+1. import the `realm-export.json`
+
+
+
