@@ -54,6 +54,7 @@ https://www.keycloak.org/getting-started/getting-started-docker
     - with  
     <img src="./imgs/5.png" width="80%"/>
     - Create a new user through KeyCloak admin console (`Users` on the left hand side)
+        - After creation: visite `http://localhost:8080/realms/<realm-name>/account/` and try to signin with your user info
 5. Copy the url in Postman
     - e.g.: `http://localhost:8080/realms/automl_dev/protocol/openid-connect/auth?client_id=automl_ui&response_type=code&scope=openid&redirect_uri=http://localhost:8081/hello&state=someRandomValue`
 6. Type in your creaded user info (username + password)
