@@ -1,7 +1,8 @@
 import Keycloak from "keycloak-js";
+import { config } from "./Constants";
 
 const keycloak = new Keycloak({
-  url: "http://localhost:8080",
+  url: config.url.KEYCLOAK_BASE_URL,
   realm: "automl_dev",
   clientId: "automl_public_client",
 });

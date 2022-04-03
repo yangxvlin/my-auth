@@ -1,11 +1,25 @@
 import React from 'react';
-import axios from 'axios';
+import { automlApi } from '../services/AutomlApi';
 
 class HelloPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       data: "null",
+    }
+  }
+
+  async componentDidMount() {
+    this.handleGetHello();
+  }
+
+  handleGetHello = async () => {
+    try {
+      const response = await automlApi.getHello();
+      const data = response.data;
+      this.setState({ data });
+    } catch (error) {
+      console.log(error);
     }
   }
 
